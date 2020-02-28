@@ -1,2 +1,5 @@
 rootProject.name='WanAndroid'
 include ':app'
+include ':baselibrary'
+include ':provider'
+include ':personal'
