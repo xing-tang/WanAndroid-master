@@ -1,12 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.open.personal">
+    package="com.open.home">
 
     <application>
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme"/>
+        <activity android:name="com.open.personal.PersonalActivity" />
     </application>
 
 </manifest>

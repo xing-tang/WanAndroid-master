@@ -1,6 +1,6 @@
 ext {
     // 是否模块化
-    isModule = true
+    isModule = false
     // 系统
     android = [
             compileSdkVersion: 29,
@@ -26,6 +26,8 @@ ext {
             "cardview"                   : "androidx.cardview:cardview:1.0.0",
             // Annotation
             "annotation"                 : "androidx.annotation:annotation:1.1.0",
+            // Multidex 64K
+            "multidex"                 : "com.android.support:multidex:1.0.2",
             //router
             "router"                     : "com.alibaba:arouter-api:1.4.1",
             "router-compiler"            : "com.alibaba:arouter-compiler:1.2.2",
@@ -43,6 +45,7 @@ ext {
             "retrofit2-adapter-rxjava"   : "com.squareup.retrofit2:adapter-rxjava:2.1.0",
             // EventBus
             "eventbus"                   : "org.greenrobot:eventbus:3.0.0"
+
     ]
 }
 

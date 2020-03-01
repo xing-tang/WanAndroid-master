@@ -2,7 +2,24 @@
 <resources>
 
     <style name="Theme.WanAndroid" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- 设置无标题栏目 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <!-- 设置ActionBar -->
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <!-- 设置界面跟顶部状态栏不重叠遮挡 -->
+        <item name="android:fitsSystemWindows">true</item>
+
+        <item name="android:background">@color/transparent</item>
+
+
+
         <item name="mainBackground">@color/day_ffffff_night_ffffff</item>
+        <item name="android:windowBackground">@color/day_ffffff_night_20232b</item>
     </style>
 
     <style name="ProgressDialogStyle">

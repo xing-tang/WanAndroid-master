@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.open.home">
+
+    <application>
+        <activity android:name="com.open.home.HomeActivity" />
+    </application>
+
+</manifest>

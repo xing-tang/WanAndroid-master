@@ -3,18 +3,24 @@
     package="com.open.wanandroid">
 
     <application
+        android:name="com.open.baselibrary.base.app.WanAndroidApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.WanAndroid">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|uiMode"
+            android:theme="@style/Theme.WanAndroid"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

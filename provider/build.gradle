@@ -1,6 +1,13 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+// 配置阿里ARouter路由
+apply plugin: 'kotlin-kapt'
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -12,22 +19,19 @@ android {
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
 
-        // 配置阿里ARouter路由
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
-            }
-        }
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
+        // 64k
+        multiDexEnabled true
     }
 
     buildTypes {
         release {
             minifyEnabled false
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        lintOptions { abortOnError false }
     }
 
     // jdk1.8
@@ -37,18 +41,13 @@ android {
     }
 
     // 避免项目中存在相同的jar包，导致运行失败
-    dexOptions {
-        preDexLibraries = false
-    }
-
-    lintOptions {
-        abortOnError false
-    }
+     dexOptions { preDexLibraries = false }
 
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api project(path: ':baselibrary')
-    annotationProcessor rootProject.ext.dependencies["router-compiler"]
+    implementation rootProject.ext.dependencies["router"]
+    kapt rootProject.ext.dependencies["router-compiler"]
 }
