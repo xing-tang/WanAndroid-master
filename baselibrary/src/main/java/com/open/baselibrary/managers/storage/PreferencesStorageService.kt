@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 import com.google.gson.GsonBuilder
 import com.google.gson.InstanceCreator
 import com.google.gson.JsonSyntaxException
-import com.truckerpath.managers.platform.PlatformManager
+import com.open.baselibrary.managers.platform.PlatformManager
 import java.util.*
 
 open class PreferencesStorageService protected constructor(

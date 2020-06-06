@@ -27,6 +27,10 @@ android {
         consumerProguardFiles 'consumer-rules.pro'
         // 64k
         multiDexEnabled true
+        // 模块化模式下设置applicationId
+        if (rootProject.ext.isModule) {
+            applicationId "com.open.project"
+        }
     }
 
     buildTypes {

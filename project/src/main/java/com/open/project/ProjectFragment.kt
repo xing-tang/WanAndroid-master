@@ -10,12 +10,17 @@ import com.open.baselibrary.base.BaseFragment
 @Route(path = "/project/ProjectFragment")
 class ProjectFragment : BaseFragment() {
 
+    var rootView: View? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_project, null);
+        if (rootView == null) {
+            rootView = inflater.inflate(R.layout.fragment_project, container, false)
+        }
+        return rootView
     }
 
     companion object {

@@ -9,7 +9,9 @@
     <color name="day_ffffff_night_ffffff">#ffffff</color>
     <color name="day_ffffff_night_20232b">#ffffff</color>
     <color name="day_000000_night_cfd1dd">#000000</color>
-
+    <color name="day_d8d8d8_night_d8d8d8">#d8d8d8</color>
+    <color name="day_666666_night_666666">#666666</color>
+    <color name="day_333333_night_333333">#333333</color>
 
 
 </resources>

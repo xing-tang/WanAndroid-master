@@ -113,8 +113,10 @@ abstract class BaseActionPresenterFragment<M : Any, V : Contract.ViewWithModel<M
         hideProgressDialog()
     }
 
+    override fun showContent(model: M) {}
+
     companion object {
-        private const val PROGRESS_DIALOG_TAG = "com.sixdays.truckerpath.view.base.progress"
+        private const val PROGRESS_DIALOG_TAG = "com.open.wanandroid.view.base.progress"
         private const val ROUTING_ACTIVITY_DIALOG_TAG = "progressDialog"
     }
 }

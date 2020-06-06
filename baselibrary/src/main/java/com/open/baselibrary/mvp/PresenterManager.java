@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class PresenterManager implements IPresenterManager {
-    private static final String PRESENTER_ID_KEY = "com.sixdays.truckerpath.managers.mvp.presenter_key";
+    private static final String PRESENTER_ID_KEY = "com.open.wanandroid.managers.mvp.presenter_key";
     private static PresenterManager ourInstance = new PresenterManager();
 
     private Map<String, BasePresenter> presenters = new HashMap<>();

@@ -1,4 +1,4 @@
-package com.truckerpath.managers.platform
+package com.open.baselibrary.managers.platform
 
 import android.app.AlarmManager
 import android.app.PendingIntent

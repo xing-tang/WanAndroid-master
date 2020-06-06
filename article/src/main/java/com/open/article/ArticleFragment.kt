@@ -10,13 +10,17 @@ import com.open.baselibrary.base.BaseFragment
 @Route(path = "/article/ArticleFragment")
 class ArticleFragment : BaseFragment() {
 
+    var rootView: View? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_article, null);
+        if (rootView == null) {
+            rootView = inflater.inflate(R.layout.fragment_article, container, false)
+        }
+        return rootView
     }
 
     companion object {

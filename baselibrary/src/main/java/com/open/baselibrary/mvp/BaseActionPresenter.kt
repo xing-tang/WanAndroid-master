@@ -1,7 +1,8 @@
 package com.open.baselibrary.mvp
 
-import com.truckerpath.managers.platform.IPlatformManager
-import com.truckerpath.managers.platform.PlatformManager
+import com.open.baselibrary.managers.platform.PlatformManager
+import com.open.baselibrary.managers.platform.IPlatformManager
+
 
 abstract class BaseActionPresenter<M : Any, T : Contract.ViewWithModel<M>>(
     protected val modelType: Class<M>,
